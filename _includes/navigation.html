@@ -1,0 +1,23 @@
+<!-- <nav>
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+  </nav> -->
+
+<div class="container">  <!-- Navbar Container -->
+  <nav class="navbar navbar-expand navbar-light rounded" style="margin-top: 20px; background-color: #FFFFFF;">
+    <a href="/" class="navbar-brand"><img src="/assets/img/fvb-logo-64.png" class="img-fluid" width="36" height="36" alt="FVB"></a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        {% for item in site.data.navigation %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+  <div class="col-md-12">
+    <hr>
+  </div>
+</div>  <!-- /Navbar Container -->

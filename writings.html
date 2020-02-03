@@ -1,0 +1,16 @@
+---
+layout: default
+title: Writings
+subtitle: Some stuff I wrote about, you know, like a blog.
+---
+
+<ul class="list-unstyled">
+  {% for post in site.posts %}
+    <li>
+      <h4><a href="{{ post.url }}">{{ post.title }}</a>
+        <small class="text-muted">{{ post.date | date_to_string}}</small>
+      </h4>
+      <!-- <p>{{ post.excerpt }}</p> -->
+    </li>
+  {% endfor %}
+</ul>

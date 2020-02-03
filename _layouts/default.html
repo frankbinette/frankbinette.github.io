@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang='en'>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if page.title == "Frank Binette" %}
+      <title>{{ page.title }} | a simple data dude.</title>
+    {% else %}
+      <title>{{ page.title }} | Frank Binette</title>
+     {% endif %}
+    <meta name="title" content="Frank Binette | Data dude.">
+    <meta name="description" content="Frank Binette is an all around data dude... etc.">
+    <meta name="keywords" content="Frank, Francois, Vienneau, Binette, Montreal, Quebec, Canada, big data, data science, machine learning, data visualization">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <!-- <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"> -->
+    <link rel="icon" type="image/png" href="/assets/img/fvb-logo-64.png" sizes="96x96">
+  </head>
+
+  <body>
+    {% include navigation.html %}
+
+    <div class="container">  <!-- Main Container -->
+
+      {% include title.html %}
+      
+      <div class="container"> <!-- Content Container -->
+        <div class="row">
+          <div class="col-md-12">
+            <hr class="py-1">
+            {{ content }}
+          </div>
+        </div>
+      </div> <!-- / Content Container -->
+
+      {% if page.title == "Frank Binette" %}
+        {% include footer_regular.html %}
+      {% elsif page.title == "About" %}
+        {% include footer_regular.html %}
+      {% elsif page.title == "Writings" %}
+        {% include footer_regular.html %}
+      {% elsif page.title == "Notes" %}
+        {% include footer_regular.html %}
+      {% else %}
+        {% include footer_post.html %}
+      {% endif %}
+
+    </div> <!-- / Main Container -->
+
+    <script src="/assets/js/bootstrap.js"></script>
+
+      <!-- Java Script -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+  </body>
+</html>
