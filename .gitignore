@@ -3,3 +3,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 todo.txt
+.vscode
+
+# Test posts
+_posts/2020-01-20-normal-post-without-pictures.html
+_posts/2020-01-21-normal-post-with-pictures.html
