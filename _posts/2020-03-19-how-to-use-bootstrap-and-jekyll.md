@@ -111,8 +111,10 @@ I still have a problem using Boostrap JavaScript from a file, i.e., if it's not 
 ## tl;dr
 
 1. Rename `bootstrap.css` to `bootstrap.scss`.
-1. Place `bootstrap.scss` inside the `./_sass/` directory.
-2. Modify the `./assets/css/&#91;style.scss&#93;` file to `@import "bootstrap";`.
-3. Make sure the reference in the header of the `./_layouts/default.html` HTML file reference the file in `./assets/css/` with a `css` extension.
+2. Place `bootstrap.scss` inside the `./_sass/` directory.
+3. Modify the `./assets/css/&#91;style.scss&#93;` file to `@import "bootstrap";`.
+4. Make sure the reference in the header of the `./_layouts/default.html` HTML file reference the file in `./assets/css/` with a `css` extension.
+
+<br>
 
 Thanks for reading,
