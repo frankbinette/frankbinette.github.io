@@ -50,11 +50,81 @@ It was ambitious to cover everything mentioned above, maybe a bit naive. I used 
 
 ### Reflecting on the experience
 
-Did we achieve our objective of exposure? Well, kind of, I'm not sure. I'm still trying to get the stats on how many times it has been downloaded. I'll update if I get the numbers. And the difficult question: did we get business out of this? I got a temporary contract with a client but not because I wrote a whitepaper. So, not really. Pepehands. Put simply, the majority of our clients are not the target market for big data technologies. As simple as that.
+Did we achieve our objective of exposure? Well, kind of, I'm not sure. ~~I'm still trying to get the stats on how many times it has been downloaded. I'll update if I get the numbers.~~ See next section. And the difficult question: did we get business out of this? I got a temporary contract with a client but not because I wrote a whitepaper. So, not really. Pepehands. Put simply, the majority of our clients are not the target market for big data technologies. As simple as that.
 
 The subject of big data was kind of new in Quebec, I would even say in Canada in general as we tend to be laggards when it comes to technology. I'm not talking about startups, but traditional enterprises like banks, or SMEs that are still trying to tackle digital transformation which often means buying their first ERP! Canada is also a small market compared to France (which I would say was an early majority adopter) and the US (an early adopter since they started it). Being a small market doesn't mean we don't use innovative technologies, but big data technologies were developed to tackle the data deluge and a small market doesn't produce a deluge of data. It's my simplest explanation without getting into too many details.
 
 One day I could re-write the whitepaper, or just write something else. Is big data even a thing anymore? Yes, it is, it's just not at the forefront anymore and the technologies have changed (where is my boy Hadoop?!) If I was opportunistic, I would simply change the title to "AI for business: how to use it to your advantage" and change a couple of use cases and there we go, we're AI specialists now! 
+
+### Update
+
+The results are in, it's humbling. Since January 2019 when we started the <a href="https://hub.novipro.com/en" target="_blank">content hub</a>, it has been downloaded 2 times in French and 2 times in English. Ouch, that's harsh. 24 viewed the download page in French, and 11 viewed it in English. I'm still proud of what I wrote but clearly, it didn't have the effect I hoped for. 
+
+There are a lot of questions we could ask ourselves following these results:
+* Did we had the right approach to reach our target market? Promotion, push marketing, etc.
+* What is our target market and how do we reach it? Big enterprises or SMEs? What level of IT maturity?
+* Is the content relevant to the current state of IT maturity in Quebec and Canada?
+* Was the title the right title? Maybe I should have chosen a more catchy title?
+* Is it simply that enterprises in Quebec/Canada just simply don't produce enough data to justify a big data initiative? 
+
+For fun, let's compare the results to another <a href="https://hub.novipro.com/en/self-service-business-intelligence" target="_blank">whitepaper</a> a colleague and I developed with a ghostwriter and already existing content from an editor (SAS). The paper, about self-service business intelligence, gathered quite some views and downloads.
+
+<!--
+|         	|           	| big data 	| business intelligence 	| Change 	| Change % 	|
+|---------	|-----------	|----------	|-----------------------	|--------	|----------	|
+| French  	| Views     	| 24       	| 833                   	| +809   	| +3371%   	|
+|         	| Downloads 	| 2        	| 58                    	| +56    	| +2800%   	|
+| English 	| Views     	| 11       	| 10                    	| -1     	| -9%      	|
+|         	| Downloads 	| 2        	| 2                     	| 0      	| 0%       	|
+-->
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Big Data</th>
+          <th scope="col">BI</th>
+          <th scope="col" class="text-right">Change %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>French</td>
+          <td>Views</td>
+          <td>24</td>
+          <td>833</td>
+          <td class="text-right">+3371%</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Downloads</td>
+          <td>2</td>
+          <td>58</td>
+          <td class="text-right">+2800%</td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td>Views</td>
+          <td>11</td>
+          <td>10</td>
+          <td class="text-right">-9%</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Downloads</td>
+          <td>2</td>
+          <td>2</td>
+          <td class="text-right">0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+The better performance could be explained by heavier promotion through a series of webinars we did on SAS Viya (in French). Also because it's a subject that is trending with our target market, i.e., it resonates more in the mind of business lines than "big data". I have a lot of ideas on why a white paper performs or not, but let's stop beating this dead horse and move on!
 
 ### Download
 
