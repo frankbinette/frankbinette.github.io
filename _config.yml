@@ -53,3 +53,14 @@ title: Frank Binette
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  notes:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
