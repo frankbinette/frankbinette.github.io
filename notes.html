@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default_note
 title: Notes
 subtitle: Here are some notes I took and I like to refer to.
 ---
@@ -26,7 +26,15 @@ subtitle: Here are some notes I took and I like to refer to.
 
 <div class="list-group list-group-horizontal-md">
   {% for note in sortedNotes %}
-    <a href="{{ note.url }}" class="list-group-item list-group-item-action">{{ note.title }}</a>
+    <!-- <a href="{{ note.url }}" class="list-group-item">{{ note.title }}</a> -->
+    <a href="#{{ note.title }}" class="list-group-item">{{ note.title }}</a>
   {% endfor %}
 </div>
 
+{% for note in sortedNotes %}
+  <hr>
+  <h3 id="{{ note.title }}">{{ note.title }}</h3>
+  <p class="lead text-muted">Last update: {{ note.update_date | date_to_long_string: "ordinal", "US" }}</p>
+  <p>{{ note.content }}</p>
+  <p class="text-center"><a href="#" class="text-muted">Top</a></p>
+{% endfor %}

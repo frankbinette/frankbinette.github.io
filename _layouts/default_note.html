@@ -19,6 +19,7 @@
     {% include navigation.html %}
 
     <div class="container">  <!-- Main Container -->
+      {% include title.html %}
       
       <div class="container"> <!-- Content Container -->
         <div class="row">
@@ -28,15 +29,9 @@
         </div>
       </div> <!-- / Content Container -->
 
-      {% if page.title == "Hi, I'm Frank Binette" %}
-        {% include footer_regular.html %}
-      {% elsif page.title == "About" %}
-        {% include footer_regular.html %}
-      {% elsif page.title == "Writings" %}
-        {% include footer_regular.html %}
-      {% else %}
-        {% include footer_post.html %}
-      {% endif %}
+
+      {% include footer_regular.html %}
+
 
     </div> <!-- / Main Container -->
 

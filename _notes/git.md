@@ -3,14 +3,14 @@ title: Git
 update_date: 2020-05-25
 ---
 
-### Push local changes to GitHub
+#### Push local changes to GitHub
 The GitHub repo has already been initialized and the local and remote branches are in sync.
 1. <code>git add .</code>
 2. <code>git status</code>
 3. <code>git commit -m "Commit comment"</code>
 4. <code>git push origin master</code>
 
-### Start a new Git repository
+#### Start a new Git repository
 1. Initialize local directory: <code>git init</code>
 2. Add local repository: <code>git add &#60;option&#62;</code>
   * <code> <.> </code> everything in the current directory, same as <code>--all</code> or <code>-A</code>
@@ -23,10 +23,10 @@ The GitHub repo has already been initialized and the local and remote branches a
 5. Push local repo to GitHub: <code>git push -u origin master</code>
   * <code> <-u> </code> will remember your preferences for remote and branch and you can simply use the command <code>git push</code> next time.
 
-### Pull a repository
+#### Pull a repository
 If your local repo copy is behind the remote one: <code>git pull origin master</code>
 
-### Configure username & email
+#### Configure username & email
 1. <code>git config --global user.name "FIRST_NAME LAST_NAME"</code>
 2. <code>git config --global user.email "MY_NAME@example.com"</code>
   * Use <code> <--global> </code> if it's for every repo, dont use it if it's for a specific repo.
@@ -34,7 +34,7 @@ If your local repo copy is behind the remote one: <code>git pull origin master</
 Display configuration file:
 *<code>cat .git/config</code>
 
-### Show & change remote URL
+#### Show & change remote URL
 1. Run <code>git remote -v</code> to list the existing remotes and see their names and URLs
   * The output will look something like this:  
           origin	https://github.com/user/repo_name.git (fetch)  
