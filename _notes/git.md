@@ -47,7 +47,7 @@ Display configuration file:
 3. Verify that the remote’s URL was successfully changed by listing it again with <code>git remote -v</code>
 
 #### Update local branch with remote master
-If your local branch is behind the remote mmaster: 
+If your local branch is behind the remote master: 
 
 * <code>git checkout [master/main]</code>
 * <code>git pull</code>
