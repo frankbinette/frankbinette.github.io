@@ -1,6 +1,6 @@
 ---
 title: Git
-update_date: 2020-05-25
+update_date: 2020-03-05
 ---
 
 #### Push local changes to GitHub
