@@ -23,9 +23,6 @@ The GitHub repo has already been initialized and the local and remote branches a
 5. Push local repo to GitHub: <code>git push -u origin master</code>
   * <code> <-u> </code> will remember your preferences for remote and branch and you can simply use the command <code>git push</code> next time.
 
-#### Pull a repository
-If your local repo copy is behind the remote one: <code>git pull origin master</code>
-
 #### Configure username & email
 1. <code>git config --global user.name "FIRST_NAME LAST_NAME"</code>
 2. <code>git config --global user.email "MY_NAME@example.com"</code>
@@ -48,3 +45,13 @@ Display configuration file:
   * The URL can be found on the repository page of your Git hosting service.
 
 3. Verify that the remote’s URL was successfully changed by listing it again with <code>git remote -v</code>
+
+#### Update local branch with remote master
+If your local branch is behind the remote mmaster: 
+
+* <code>git checkout [master/main]</code>
+* <code>git pull</code>
+* <code>git checkout [my-branch-which-is-behind]</code>
+* <code>git merge master</code>
+
+Git will ask for a commit message. 
