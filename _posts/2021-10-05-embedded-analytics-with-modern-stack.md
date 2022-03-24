@@ -6,7 +6,7 @@ title: How we built embedded analytics with a modern data stack
 Original story published on Poka's [tech blog](https://medium.com/poka-techblog/how-we-built-embedded-analytics-with-a-modern-data-stack-25395af43d33).
 
 <div class="figure text-center">
-  <img src="/assets/img/embeds/01-cover.png" class="img-fluid" alt="Cover image">
+  <img src="/assets/img/embeds/01-cover.jpeg" class="img-fluid" alt="Cover image">
   <figcaption class="figure-caption">Visual by Sophie Pepin Desjardins.</figcaption>
 </div>
 
@@ -165,7 +165,7 @@ We use the above script to define the name of the dashboards that will appear on
 In the end, the embedded dashboards will look something like this, embedded in our app!
 
 <div class="figure text-center">
-  <img src="/assets/img/embeds/12-dashboard.png" class="img-fluid" alt="A screen capture showing the exams dashboard built and served by Looker but embedded in the Poka application.">
+  <img src="/assets/img/embeds/12-dashboard.jpeg" class="img-fluid" alt="A screen capture showing the exams dashboard built and served by Looker but embedded in the Poka application.">
   <figcaption class="figure-caption">The exams dashboard as seen embedded in the Poka application.</figcaption>
 </div>
 
