@@ -3,7 +3,7 @@ layout: post
 title: How we built embedded analytics with a modern data stack
 ---
 
-Original story published on Poka's [tech blog](https://medium.com/poka-techblog/how-we-built-embedded-analytics-with-a-modern-data-stack-25395af43d33).
+<p class='mb-5'>Original story published on Poka's [tech blog](https://medium.com/poka-techblog/how-we-built-embedded-analytics-with-a-modern-data-stack-25395af43d33).</p>
 
 <div class="figure text-center">
   <img src="/assets/img/embeds/01-cover.jpeg" class="img-fluid" alt="Cover image">
@@ -102,7 +102,7 @@ dbt works with what’s called models which are simple or complex SQL queries th
 Below is the model we run daily to transform the raw [semi-structured](https://docs.snowflake.com/en/user-guide/querying-semistructured.html) exam data in JSON into something analytics-ready, into a real table, ready to use in Looker.
 
 <div class="figure text-center">
-  <img src="/assets/img/embeds/07-dbt" class="img-fluid" alt="A screen capture of SQL code, part of a dbt model, used to transform data from the Poka application.">
+  <img src="/assets/img/embeds/07-dbt.png" class="img-fluid" alt="A screen capture of SQL code, part of a dbt model, used to transform data from the Poka application.">
   <figcaption class="figure-caption mb-5">One of our dbt models that transform ‘exam’ data from our app.</figcaption>
 </div>
 
