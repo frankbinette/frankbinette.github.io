@@ -3,7 +3,7 @@ layout: post
 title: How we built embedded analytics with a modern data stack
 ---
 
-<p class='mb-5'>Original story published on Poka's [tech blog](https://medium.com/poka-techblog/how-we-built-embedded-analytics-with-a-modern-data-stack-25395af43d33).</p>
+<p class='mb-5'>Original story published on Poka's <a href="https://medium.com/poka-techblog/how-we-built-embedded-analytics-with-a-modern-data-stack-25395af43d33">tech blog</a>.</p>
 
 <div class="figure text-center">
   <img src="/assets/img/embeds/01-cover.jpeg" class="img-fluid" alt="Cover image">
@@ -85,7 +85,7 @@ We start by checking in the data warehouse what the raw data looks like, just to
 For the sake of simplicity, we’ll skip the data engineering part where we capture our application data and send it into Snowflake. But I’ll say it involves message queues and S3 buckets to make sure we don’t lose anything. The raw data is extracted daily from our backend databases and once received in Snowflake, it will look something like this.
 
 <div class="figure text-center">
-  <img src="/assets/img/embeds/06-snowflake" class="img-fluid" alt="A screen capture of the Snowflake UI showing the results of a SQL query on raw Poka data.">
+  <img src="/assets/img/embeds/06-snowflake.png" class="img-fluid" alt="A screen capture of the Snowflake UI showing the results of a SQL query on raw Poka data.">
   <figcaption class="figure-caption mb-5">An example of raw exam data stored in our Snowflake data warehouse.</figcaption>
 </div>
 
