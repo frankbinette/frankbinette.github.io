@@ -7,7 +7,7 @@ Original story published on Poka's [tech blog](https://medium.com/poka-techblog/
 
 <div class="figure text-center">
   <img src="/assets/img/embeds/01-cover.jpeg" class="img-fluid" alt="Cover image">
-  <figcaption class="figure-caption">Visual by Sophie Pepin Desjardins.</figcaption>
+  <figcaption class="figure-caption mb-5">Visual by Sophie Pepin Desjardins.</figcaption>
 </div>
 
 # How we built embedded analytics with a modern data stack
@@ -21,10 +21,14 @@ We decided at Poka to introduce this concept of insights, or “analytics”, th
   <figcaption class="figure-caption">The first version of our in-app analytics showing the number of news posts created by weeks.</figcaption>
 </div>
 
+<br>
+
 <div class="figure text-center">
   <img src="/assets/img/embeds/03-old-graph.png" class="img-fluid" alt="Example of an old embedded graph in Poka">
   <figcaption class="figure-caption">The same first version showing different statistics about the (fake) users.</figcaption>
 </div>
+
+<br>
 
 While these two graphs give the Poka’s admins insights on how the app is used, it’s still a bit light in terms of usefulness. It’s not actionable and the user can not interact with the data, change the time frame, or filter it. Plus, it needs to be built from scratch by our frontend developers, which takes precious time.
 
@@ -53,6 +57,8 @@ Here is what we’re using.
   <figcaption class="figure-caption">An overview of Poka’s data architecture.</figcaption>
 </div>
 
+<br>
+
 In case you don’t know all these technologies, here is a quick recap of what we’re using for the embedded analytics:
 
 - **Snowflake** is a cloud data warehouse, super scalable in terms of storage and compute power, in which we store in different databases all our raw and transformed data.
@@ -76,6 +82,8 @@ You may not be familiar with Poka but what I call features are simply functional
   <figcaption class="figure-caption">Poka’s main features and modules.</figcaption>
 </div>
 
+<br>
+
 We start with requirements that can be a list of graphs and KPIs they would like to show, or better, a Figma prototype. What feature you want to analyze and what type of analytics you want is enough to move to the next step.
 
 ### Step 1 — Hunt for data
@@ -88,6 +96,8 @@ For the sake of simplicity, we’ll skip the data engineering part where we capt
   <img src="/assets/img/embeds/06-snowflake" class="img-fluid" alt="A screen capture of the Snowflake UI showing the results of a SQL query on raw Poka data.">
   <figcaption class="figure-caption">An example of raw exam data stored in our Snowflake data warehouse.</figcaption>
 </div>
+
+<br>
 
 As we can observe, we inject a lot of metadata: the name of the tenant (`instance` and `tenant` are terms relative to a client) from which the data comes from, the `name` of the feature in our app that produced that data, the time at which the data has been relayed from our backend, and the actual payload in JSON (`event_data`).
 
@@ -106,6 +116,8 @@ Below is the model we run daily to transform the raw [semi-structured](https://d
   <figcaption class="figure-caption">One of our dbt models that transform ‘exam’ data from our app.</figcaption>
 </div>
 
+<br>
+
 What we see in the above SQL code is that we added [Jinja and macros](https://docs.getdbt.com/docs/building-a-dbt-project/jinja-macros) to reuse transformations we use often, like our own `compound_key` macro made to concatenate strings into IDs. That’s one of the powerful features of dbt.
 
 We then schedule this transformation to run every day once the raw data is updated, so everything stays fresh.
@@ -120,6 +132,8 @@ The advantage of automatic scheduling is that it’s not dependant on one person
   <img src="/assets/img/embeds/08-prefect.png" class="img-fluid" alt="A screen capture of Prefect Cloud, the tool used to schedule data transformations, showing an overview of the different flows ran in the last days.">
   <figcaption class="figure-caption">An overview of the Prefect flow that transforms and updates the datasets used by our embedded analytics.</figcaption>
 </div>
+
+<br>
 
 As we can see, we programmed Prefect to run the embedded analytics flow every day at 5 AM eastern time and we have a pretty good success rate!
 
@@ -136,6 +150,8 @@ Looker could be a tutorial on its own but to keep it simple, since we’ve taken
   <figcaption class="figure-caption">Our Looker project tree with the exam view (think table definition).</figcaption>
 </div>
 
+<br>
+
 Once the basic connections are done, we can start prototyping a dashboard by drag and dropping what we want — like any BI tool.
 
 What’s different with our embedded analytics is that once the product owner and the data team are satisfied with the dashboard, we’ll recreate it in LookML, as represented below.
@@ -144,6 +160,8 @@ What’s different with our embedded analytics is that once the product owner an
   <img src="/assets/img/embeds/10-looker-dashboard.png" class="img-fluid" alt="A screen capture of the Looker UI showing a part if the LookML code used to define a dashboard, highlighting a KPI, an element of the dashboard for the exams data.">
   <figcaption class="figure-caption">An example of the exam’s embedded dashboard made with LookML. Here we highlighted a simple KPI we show on the dashboard.</figcaption>
 </div>
+
+<br>
 
 LookML is a markup language used for pretty much [everything in Looker](https://docs.looker.com/data-modeling/learning-lookml/what-is-lookml): create views (tables), create dimensions and measures, join views, and even create dashboards. In the example above, we created a KPI indicator (called a *single_value*) and defined every parameter we need: what data to use, that field to use, what we want it to do with the data, the size and location of the indicator in the dashboard, colors, etc.
 
@@ -160,6 +178,8 @@ We don’t need developers anymore (!) but we still need a way to integrate the 
   <figcaption class="figure-caption">A part of a Python script we use to manage the inventory of our embedded dashboards. Here we highlighted the exam dashboard.</figcaption>
 </div>
 
+<br>
+
 We use the above script to define the name of the dashboards that will appear on the side menu, but also we can decide if the dashboard can be available to everyone or if we want to keep it on certain instances of our app (like the instance we use for quality analysis).
 
 In the end, the embedded dashboards will look something like this, embedded in our app!
@@ -168,6 +188,8 @@ In the end, the embedded dashboards will look something like this, embedded in o
   <img src="/assets/img/embeds/12-dashboard.jpeg" class="img-fluid" alt="A screen capture showing the exams dashboard built and served by Looker but embedded in the Poka application.">
   <figcaption class="figure-caption">The exams dashboard as seen embedded in the Poka application.</figcaption>
 </div>
+
+<br>
 
 ## What about everything else?
 
