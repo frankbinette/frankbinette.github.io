@@ -2,7 +2,7 @@
 #  link: /
 - name: About
   link: /about.html
-- name: Writings
-  link: /writings.html
+#- name: Writings
+#  link: /writings.html
 - name: Notes
   link: /notes.html
