@@ -4,6 +4,7 @@ _site/
 .jekyll-metadata
 todo.txt
 .vscode
+.DS_Store
 
 # Test posts
 _posts/2020-01-20-normal-post-without-pictures.html
